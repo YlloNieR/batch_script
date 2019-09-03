@@ -1,0 +1,3 @@
+@echo off
+set satz=Anfang des Satzes ...
+echo %satz% Erweiterung des Satzes
