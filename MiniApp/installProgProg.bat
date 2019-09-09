@@ -3,6 +3,7 @@
 :: 1. falls Dateinamen "()" enthalten ändern in "-" oder sonstiges --> bug
 :: 2. falls echo texte mit klammern versehen sind ggf in "" einbetten
 :: 3. Ausführort der batch = Speicherort der DL, außer Änderung bei ... 'http://download.url/here.exe', 'C:\destination\here.exe')
+:: 4. Löschvorgang /f ... ignore read-only setting      /q ... "quiet mode" no prompt "Delete Yes / No"
 
 echo.
 echo Installationsprogramm fuer alle Programmierandendungen
