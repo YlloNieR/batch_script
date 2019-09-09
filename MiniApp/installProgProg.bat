@@ -168,7 +168,7 @@ if "%id%" == "7" (
 ) 
 
 
-::8 = Strawberry Perl V.5.30.0.1
+:: 8 = Strawberry Perl V.5.30.0.1
 if "%id%" == "8" (
     echo "Strawberry Perl" V.5.30.0.1 wird installiert... 
     ::Starte Download
@@ -181,7 +181,7 @@ if "%id%" == "8" (
 )
 
 
-::9 = XAMPP V.7.3.9 (Apache + MariaDB + PHP + Perl)
+:: 9 = XAMPP V.7.3.9 (Apache + MariaDB + PHP + Perl)
 if "%id%" == "9" (
     echo "XAMPP (Apache + MariaDB + PHP + Perl)" V.7.3.9 wird installiert... 
     ::Starte Download
@@ -198,8 +198,25 @@ if "%id%" == "9" (
 exit /b %ERRORLEVEL%
 
 :beendet_installProgProg
+echo Loesche Installationsdateien...
+:: 2 = Git V. 2.21.0
+del "Git-2.23.0-64-bit.exe" /f /q
+:: 3 = GitHub Desktop V.latest
+del "GitHubDesktopSetup.exe" /f /q
+:: 4 = Microsoft Visual Studio Code V.latest
+del "VSCodeUserSetup-x64-1.38.0.exe" /f /q
+:: 5 = Notepad ++ V7.7.1
+del "npp.7.7.1.Installer.exe" /f /q
+::  6 = Python V.3.7.4
+del "python-3.7.4.exe" /f /q
+:: 7 = Rakudo Star V.2019.03 (Perl)
+del "rakudo-star-2019.03-x86_64_JIT_.msi" /f /q
+:: 8 = Strawberry Perl V.5.30.0.1
+del "strawberry-perl-5.30.0.1-64bit.msi" /f /q
+:: 9 = XAMPP V.7.3.9 (Apache + MariaDB + PHP + Perl)
+del "xampp-windows-x64-7.3.9-0-VC15-installer.exe" /f /q
 echo.
-echo Installation abgeschlossen ;)
+echo Installation & Löschvorgang abgeschlossen ;)
 echo.
 echo Bye Bye
 exit /b
