@@ -202,7 +202,7 @@ del "VeraCrypt Setup 1.23-Hotfix-2.exe" /f /q
 del "WD_Quick_View_Setup_for_Windows.zip" /f /q
 
 echo.
-echo Installation & Löschvorgang abgeschlossen ;)
+echo Installation & Loeschvorgang abgeschlossen ;)
 echo.
 echo Bye Bye
 exit /b
