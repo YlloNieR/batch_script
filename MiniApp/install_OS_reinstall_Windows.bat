@@ -205,10 +205,8 @@ del "WD_Quick_View_Setup_for_Windows.zip" /f /q
 del /s /q  %~dp09*
 rmdir /s /q %~dp09
 
-
-
 echo.
-echo "Installation & Loeschvorgang abgeschlossen ;)"
+echo Installation & Loeschvorgang abgeschlossen ;)
 echo.
 echo Bye Bye
 exit /b

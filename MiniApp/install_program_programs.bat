@@ -217,7 +217,7 @@ del "strawberry-perl-5.30.0.1-64bit.msi" /f /q
 :: 9 = XAMPP V.7.3.9 (Apache + MariaDB + PHP + Perl)
 del "xampp-windows-x64-7.3.9-0-VC15-installer.exe" /f /q
 echo.
-echo Installation & Löschvorgang abgeschlossen ;)
+echo Installation und Loeschvorgang abgeschlossen ;)
 echo.
 echo Bye Bye
 exit /b
