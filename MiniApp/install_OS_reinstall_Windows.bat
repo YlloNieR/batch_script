@@ -79,8 +79,10 @@ if "%id%" == "1" (
     echo Starte Download WD Quick View ...
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://downloads.wdc.com/nas/WD_Quick_View_Setup_for_Windows.zip', 'WD_Quick_View_Setup_for_Windows.zip')"
     echo Entpacke .zip Paket...
-    ::ENTPACKEN!!! start WD_Quick_View_Setup_for_Windows.zip   
+    set /p id="Gib Bitte den Pfad (beginnend mit C) an wo die zu entpackenden .zip oder rar Datein hin extrahiert werden sollen: "
+    powershell Expand-Archive WD_Quick_View_Setup_for_Windows.zip -DestinationPath "%id%"
     echo Starte Installation...
+    start WD Quick View Setup.exe 
 		
 	call :beendet_installProgProg
     exit /b %ERRORLEVEL%
@@ -179,13 +181,13 @@ if "%id%" == "9" (
     powershell -Command "(New-Object Net.WebClient).DownloadFile('https://downloads.wdc.com/nas/WD_Quick_View_Setup_for_Windows.zip', 'WD_Quick_View_Setup_for_Windows.zip')"
     ::Starte Installation
     echo Entpacke .zip Paket...
-    ::ENTPACKEN!!! start WD_Quick_View_Setup_for_Windows.zip   
+    set /p id="Gib Bitte den Pfad (beginnend mit C) an wo die zu entpackenden .zip oder rar Datein hin extrahiert werden sollen: "
+    powershell Expand-Archive WD_Quick_View_Setup_for_Windows.zip -DestinationPath "%id%"
     echo Starte Installation...
+    pause
+    start %~dp09\"WD Quick View Setup.exe"
     goto :nochEine
 )
-
-
-
 
 ::speariert Funktionen vom Hauptprogramm
 exit /b %ERRORLEVEL%
@@ -200,6 +202,9 @@ del "sc68-win-lide220-1_03-ea33_3.exe" /f /q
 del "KeePass-2.43-Setup.exe" /f /q
 del "VeraCrypt Setup 1.23-Hotfix-2.exe" /f /q
 del "WD_Quick_View_Setup_for_Windows.zip" /f /q
+rmdir %~dp0"9"
+
+
 
 echo.
 echo Installation & Loeschvorgang abgeschlossen ;)

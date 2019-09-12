@@ -1,6 +1,4 @@
 @echo off
-::set path=C:\Program Files\WinRAR
-::unzip e WD_Quick_View_Setup_for_Windows.zip
-::pause
+set /p id="Gib Bitte den Pfad (beginnend mit C) an wo die zu entpackenden .zip oder rar Datein hin extrahiert werden sollen: "
 
-"C:\Program Files\WinRAR\WinRAR.exe" x "C:\xampp\htdocs\Projekte\batch-script\WD_Quick_View_Setup_for_Windows.zip" -o "C:\xampp\htdocs\Projekte\batch-script\"
+powershell Expand-Archive WD_Quick_View_Setup_for_Windows.zip -DestinationPath "%id%"

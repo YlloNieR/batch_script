@@ -1,0 +1,1 @@
+rmdir %~dp0"WD Software"
