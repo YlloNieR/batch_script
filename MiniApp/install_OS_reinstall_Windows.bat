@@ -202,12 +202,13 @@ del "sc68-win-lide220-1_03-ea33_3.exe" /f /q
 del "KeePass-2.43-Setup.exe" /f /q
 del "VeraCrypt Setup 1.23-Hotfix-2.exe" /f /q
 del "WD_Quick_View_Setup_for_Windows.zip" /f /q
-rmdir %~dp0"9"
+del /s /q  %~dp09*
+rmdir /s /q %~dp09
 
 
 
 echo.
-echo Installation & Loeschvorgang abgeschlossen ;)
+echo "Installation & Loeschvorgang abgeschlossen ;)"
 echo.
 echo Bye Bye
 exit /b
