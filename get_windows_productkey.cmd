@@ -1,0 +1,1 @@
+powershell (wmic path softwarelicensingservice get OA3xOriginalProductKey) > productkey.txt
